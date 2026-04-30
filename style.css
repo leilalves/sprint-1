@@ -1,0 +1,175 @@
+/* Fontes */
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-Bold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-ExtraBold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-Medium.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-Regular.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Mango';
+    src: url('./assets/fonts/MangoGrotesque-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/* Cores */
+:root {
+    --bege: #FFF6C3;
+    --vermelho-fundo: #320D01;
+    --vermelho-fonte: #6F0000;
+    --amarelo: #AB6900;
+    --amarelo-hover: #593700
+}
+
+/* Geral */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header */
+
+.navbar.navbar-expand-lg {
+    background-color: var(--bege);
+    display: flex;
+}
+
+.collapse.navbar-collapse {
+    background-color: var(--bege);
+    justify-content: center;
+    padding-left: 7rem;
+}
+
+.nav-link {
+    color: var(--amarelo);
+    font-family: 'Mango';
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--amarelo-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+}
+
+i {
+    justify-content: right;
+    margin-right: 1rem;
+}
+
+i:hover {
+    color: var(--amarelo-hover) !important;
+}
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    background-color: var(--bege);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 5rem;
+}
+
+/* Hero - imagem */
+
+.arm {
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    position: absolute;
+}
+
+.arm-vinyl {
+    width: 63rem;
+}
+
+/* Hero - textos */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    color: var(--vermelho-fonte);
+    width: 100%;
+    margin-bottom: -100px;
+}
+
+.echoes {
+    font-family: 'Mango';
+    font-weight: 700;
+    font-size: 20rem;
+}
+
+.discos {
+    font-family: 'Mango';
+    font-weight: 700;
+    font-size: 20rem;
+    margin-left: auto;
+}
+
+.desc {
+    font-family: 'Mango';
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-left: auto;
+    margin-left: auto;
+    color: black;
+}
+
+/* Hero - botão */
+
+.button {
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: auto;
+    transition: transform 0.3s ease;
+}
+
+.btn {
+    font-family: 'Mango';
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
