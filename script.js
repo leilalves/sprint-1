@@ -1,11 +1,21 @@
 // Altera a cor de fundo do carrossel
 
-function mudarFundo () {
-const slide = document.getElementsByClassName('carousel-item')
+function atualizarFundo() {
+    const slideAtivo = document.querySelector('.carousel-item.active');
 
-    document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.carousel-item').forEach(box => {
-        box.style.backgroundColor = box.getAttribute('data-bg');
+    if (slideAtivo) {
+        const cor = slideAtivo.dataset.bg;
+
+        document.body.style.backgroundColor = cor;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    atualizarFundo();
+
+    const carousel = document.querySelector('#customCarousel');
+
+    carousel.addEventListener('slid.bs.carousel', () => {
+        atualizarFundo();
     });
-    });
-};
+});
