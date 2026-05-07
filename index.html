@@ -10,6 +10,8 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header e Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +36,11 @@
         </div>
         
         
-        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ab6900; width: 3rem;"></i>
+        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ab6900;"></i>
         <i class="fa-regular fa-user fa-xl" style="color: #ab6900;"></i>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
 
         <div class="title">
@@ -56,63 +59,67 @@
         </div>
     </section>
 
+    <!-- Carrossel Em ALta -->
+
+    <h2 class="page-title">Em Alta</h2>
+
     <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
 
-  <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    <div class="carousel-item active" data-bg="#320D01">
-      <div class="carousel-content">
+      <div class="carousel-item active" data-bg="#320D01">
+        <div class="carousel-content">
 
-        <h1 class="bg-text">DRA<br>CU<br>LA</h1>
+          <h1 class="bg-text">DRA<br>CU<br>LA</h1>
 
-        <img src="./assets/img/dracula.png" class="disco-principal">
+          <img src="./assets/img/dracula.png" class="disco-principal">
 
-        <div class="side-preview left">
-          <img src="./assets/img/mansbff.png">
+          <div class="side-preview left">
+            <img src="./assets/img/mansbff.png">
+          </div>
+
+          <div class="side-preview right">
+            <img src="./assets/img/dtmf.png">
+          </div>
+
         </div>
-
-        <div class="side-preview right">
-          <img src="./assets/img/dtmf.png">
-        </div>
-
       </div>
-    </div>
 
-    <div class="carousel-item" data-bg="#003459">
-      <div class="carousel-content">
-        
-        <h1 class="bg-text">DEBÍ<br>TIRAR<br>MAS<br>FOTOS</h1>
+      <div class="carousel-item" data-bg="#003459">
+        <div class="carousel-content">
+          
+          <h1 class="bg-text">DEBÍ<br>TIRAR<br>MAS<br>FOTOS</h1>
 
-        <img src="./assets/img/dtmf.png" class="disco-principal">
+          <img src="./assets/img/dtmf.png" class="disco-principal">
 
-        <div class="side-preview left">
-          <img src="./assets/img/dracula.png">
+          <div class="side-preview left">
+            <img src="./assets/img/dracula.png">
+          </div>
+
+          <div class="side-preview right">
+            <img src="./assets/img/mansbff.png">
+          </div>
+
         </div>
-
-        <div class="side-preview right">
-          <img src="./assets/img/mansbff.png">
-        </div>
-
       </div>
-    </div>
 
-    <div class="carousel-item" data-bg="#80BFD3">
-      <div class="carousel-content">
+      <div class="carousel-item" data-bg="#80BFD3">
+        <div class="carousel-content">
 
-        <h1 class="bg-text">MAN'S<br>BEST<br>FRIEND</h1>
+          <h1 class="bg-text">MAN'S<br>BEST<br>FRIEND</h1>
 
-        <img src="./assets/img/mansbff.png" class="disco-principal">
+          <img src="./assets/img/mansbff.png" class="disco-principal">
 
-        <div class="side-preview left">
-          <img src="./assets/img/dtmf.png">
+          <div class="side-preview left">
+            <img src="./assets/img/dtmf.png">
+          </div>
+
+          <div class="side-preview right">
+            <img src="./assets/img/dracula.png">
+          </div>
+
         </div>
-
-        <div class="side-preview right">
-          <img src="./assets/img/dracula.png">
-        </div>
-
       </div>
-    </div>
 
   </div>
 
@@ -125,6 +132,208 @@
   </button>
 
 </div>
+
+<!-- Catálogo -->
+<section class="catalogue">
+
+  <div class="row">
+    <h2 class="page-title-discos">Discos</h2>
+
+    <div class="filtros">
+      <button class="disponiveis">Disponíveis <img class="setinha" src="/assets/img/sort-down-solid.png"></button>
+
+      <button class="indisponiveis">Indisponíveis <img class="setinha" src="/assets/img/sort-down-solid.png"></button>
+
+      <input type="text" id="pesquisa" onkeyup="pesquisaCatalogo()" placeholder="Pesquisar">
+    </div>
+  </div>
+
+  <div class="catalogo">
+
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Live Through This</h3>
+        <h4 class="artist">Hole</h4>
+        <p class="genres">grunge/alt rock/punk rock</p>
+        <div class="price">
+          <h3 class="preco">R$170</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/hole.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Live Through This</h3>
+        <h4 class="artist">pumapjl</h4>
+        <p class="genres">boom-bap/jazz rap</p>
+        <div class="price">
+          <h3 class="preco">R$140</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/pumapjl.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Weedkiller</h3>
+        <h4 class="artist">Ashnikko</h4>
+        <p class="genres">hyperpop/industrial/trap metal</p>
+        <div class="price">
+          <h3 class="preco">R$270</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/ashnikko.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Fetiche</h3>
+        <h4 class="artist">yung vegan</h4>
+        <p class="genres">hip-hop/boom-bap/jazz/drumless</p>
+        <div class="price">
+          <h3 class="preco">R$130</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/vegan.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Jar of Flies</h3>
+        <h4 class="artist">Alice in Chains</h4>
+        <p class="genres">grunge/alt rock/hard rock/rock</p>
+        <div class="price">
+          <h3 class="preco">R$290</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/alice.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">OPROPRIO</h3>
+        <h4 class="artist">Yago Oproprio</h4>
+        <p class="genres">hip-hop/mpb/r&b/boom-bap</p>
+        <div class="price">
+          <h3 class="preco">R$410</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/yago.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Red Light</h3>
+        <h4 class="artist">f(x)</h4>
+        <p class="genres">k-pop/dance/electropop/hip-hop</p>
+        <div class="price">
+          <h3 class="preco">R$230</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/fx.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Luz</h3>
+        <h4 class="artist">Djavan</h4>
+        <p class="genres">mpb/soul/funk/pop/jazz/regional</p>
+        <div class="price">
+          <h3 class="preco">R$200</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/djavan.png">
+    </div>
+    <div class="disco">
+      <div class="info">
+        <h3 class="name">Etazhi </h3>
+        <h4 class="artist">Molchat Doma</h4>
+        <p class="genres">synth pop/dark wave/new wave</p>
+        <div class="price">
+          <h3 class="preco">R$250</h3>
+          <div class="icons">
+            <i class="fa-solid fa-headphones fa-2xl" style="color: #6f0000;"></i>
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #6f0000;"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cover" src="/assets/img/molchat.png">
+    </div>
+  </div>
+
+  <div class="prev-next">
+    <i class="fa-solid fa-angle-left fa-2xl" style="color: rgb(255, 246, 194);"></i>
+    <i class="fa-solid fa-angle-right fa-2xl" style="color: rgb(255, 246, 194);"></i>
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <div class="title-contact">
+    <h2 class="page-title-contato-inv">Contato</h2>
+    <h2 class="page-title-contato">Contato</h2>
+    <h2 class="page-title-contato-inv">Contato</h2>
+  </div>
+
+  <div class="metades">
+    <div class="acervo">
+      <h5 class="procurou">Procurou e não achou?</h5>
+      <p class="sugestao">Temos a maior coleção da américa latina, mas estamos sempre procurando expandi-la. Dê sua sugestão!</p>
+      <img class="colecao" src="/assets/img/discos.png">
+    </div>
+
+    <div class="formulario">
+      <h3 class="conversa">Vamos conversar!</h3>
+
+        <form class="dados">
+          <div class="cubos">
+            <div class="cube">
+              <label for="nome" class="label">Nome</label><br>
+              <input type="text" class="name-put" id="nome" placeholder="">
+            </div>
+            <div class="cube">
+              <label for="email" class="label">Email</label><br>
+              <input type="email" class="email-put" id="email" placeholder="">
+            </div>
+          </div>
+          <div class="sugira">
+            <label for="nome" class="label">Como podemos te ajudar?</label><br>
+            <textarea type="text" name="text" cols="35" rows="10" required></textarea>
+          </div>
+          <button type="submit" class="enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
