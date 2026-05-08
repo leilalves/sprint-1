@@ -715,87 +715,116 @@ textarea {
 }
 
 
-.copyright{
-    width: 100%;
-    text-align: center;
-    color: white;
-    margin-top: 40px;
-    font-size: 26px;
-    font-family: 'Arial Narrow', sans-serif;
+.album-modal{
+    width:100vw;
+    height:100vh;
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
 }
 
-/* Modal */
+.album-modal:target{
+    display:flex;
+}
 
-.modal{
-    width: 47.5rem;
-    background: #000;
-    padding: 1.25rem;
-    border: 0.5rem solid #111;
+.modal-fundo{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
 }
 
 .modal-content{
-    border: 0.0625rem solid #8f7d3d;
-    padding: 1.125rem;
+    width:40rem;
+    max-width:90vw;
+    max-height:90vh;
+    background:#000;
+    border:1px solid var(--bege);
+    position:relative;
+    z-index:1;
 }
 
 .modal-topo{
-    display: flex;
-    gap: 1.375rem;
+    display:flex;
+    gap:1.375rem;
 }
 
 .modal-imagem img{
-    width: 20rem;
-    height: 19.6875rem;
-    object-fit: cover;
-    border: 0.0625rem solid #8f7d3d;
+    width:17rem;
+    height:17rem;
+    object-fit:cover;
+    border:1px solid var(--bege);
 }
 
 .modal-info{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5625rem;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
 }
 
 .modal-info h1{
-    font-size: 4.25rem;
-    font-family: Impact, sans-serif;
+    font-size:4.25rem;
+    font-family:'Mango';
+    font-weight:800;
+    text-align:center;
+    margin:0;
+    padding-top:1rem;
+    padding-bottom:0;
+    margin-bottom:-2rem;
 }
 
 .modal-info p{
-    font-size: 1.75rem;
-    line-height: 1.1;
-}
-
-.modal-descricao{
-    margin-top: 1.5625rem;
+    font-family:'Mango';
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:2rem;
+    margin:0;
 }
 
 .modal-descricao p{
-    color: white;
-    font-size: 1.125rem;
-    line-height: 1.4;
+    color:white;
+    font-size:1.6rem;
+    font-family:'Mango';
+    font-weight:500;
+    line-height:1.4;
+    padding-bottom:0;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin-bottom:0;
+    padding-top:1rem;
 }
 
 .modal-footer{
-    margin-top: 1.75rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top:1.75rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .btn-carrinho{
-    background: #b87900;
-    color: white;
-    border: none;
-    width: 29rem;
-    padding: 1.125rem 2.1875rem;
-    font-size: 1.375rem;
-    cursor: pointer;
+    background:#b87900;
+    font-family:'Mango';
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border:none;
+    width:29rem;
+    padding:1.125rem 2.1875rem;
+    margin-left:1rem;
+    margin-top:-1rem;
+    font-size:2.5rem;
+    cursor:pointer;
+    height:3.7rem;
 }
 
 .modal-footer h2{
-    color: white;
-    font-size: 3.125rem;
-    font-family: Impact, sans-serif;
+    color:white;
+    font-size:3.125rem;
+    font-family:'Mango';
+    font-weight:700;
+    padding-right:1rem;
 }
