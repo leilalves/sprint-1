@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-admin">
+
+    <div class="div-painel  justify-content-between align-items-center">
+        <h2 class="text text-light">Painel de Controle</h2>
+        <a href="login.html">
+        <button class="btn-sair">Sair</button>
+    </a>
+    </div>
+
+    <img src="assets/img/disco-dash.png" class="float-start img-disco-topo">
+
+    <div class="adiciona border d-flex adiciona-container">
+        <h1 class="text-light text-center w-100 ">Adicionar novo Disco</h1>
+    </div>
+
+    <div class="border-bottom mt-5"></div>
+
+    <div class="card-body">
+        <form id="formAddDisco">
+            <div class="d-flex mt-5">
+                <div class="mb-5 col-md-6 input-group-custom">
+                    <h3 class="form-label text-light">Álbum</h3>
+                    <input type="text" class="form-control" placeholder="Álbum">
+                </div>
+                <div class="mb-5 col-mb-6 input-group-right">
+                    <h3 class="form-label text-light">Preço</h3>
+                    <input type="text" class="form-control" placeholder="Preço">
+                </div>
+            </div>
+
+            <div class="d-flex mt-4">
+                <div class="mb-5 col-md-6 input-group-custom">
+                    <h3 class="form-label text-light">Artista</h3>
+                    <input type="text" class="form-control" placeholder="Artista">
+                </div>
+                <div class="mb-5 col-mb-6 input-group-right">
+                    <h3 class="form-label text-light">Foto</h3>
+                    <input type="file" class="form-control" id="imagem">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button class="btn-cadastrar-disco mt-4 d-flex justify-content-center align-items-center">
+        <i class="bi bi-disc fs-3 text-white"></i> 
+        <h4 class="text-light ms-2 mt-0 mb-0">Cadastrar novo disco</h4>
+        <i class="bi-arrow-right ms-2 fs-4 mt-1 text-white"></i>
+    </button>
+
+    <div class="div d-flex justify-content-center mt-3">
+        <a class="text text-light text-center" href="https://google.com" target="_blank">Ver novo disco na biblioteca</a>
+    </div>
+
+    <div class="border-bottom mt-5">
+    </div>
+
+    <div class="estoque-titulo-container mt-5 mb-2">
+        <h1 class="estoque-titulo-texto">Estoque da Loja</h1>
+    </div>
+
+
+    <div class="estoque-container mt-5 border border-3">
+        <button class="btn-lista" onclick="abrirLista('listaEstoque', 'iconeEstoque')">
+            <span>Estoque</span>
+            <i id="iconeEstoque" class="bi bi-chevron-down"></i>
+        </button>
+
+        <ul id="listaEstoque" class="lista-discos">
+            <li><span>*</span> Weedkiller - Ashnikko <strong>40</strong></li>
+            <li><span>*</span> Live through this - Hole <strong>33</strong></li>
+            <li><span>*</span> luz - Djavan <strong>45</strong></li>
+            <li><span>*</span> Etazhi - Molchat Doma <strong>38</strong></li>
+            <li><span>*</span> Fetiche - Yung Vegan <strong>29</strong></li>
+        </ul>
+
+        <button class="btn-lista" onclick="abrirLista('listaFalta', 'iconeFalta')">
+            <span>Em Falta</span>
+            <i id="iconeFalta" class="bi bi-chevron-down"></i>
+        </button>
+
+        <ul id="listaFalta" class="lista-discos">
+            <li><span>*</span> Thriller - Michael Jackson <strong>0</strong></li>
+            <li><span>*</span> Back to Black - Amy Winehouse <strong>0</strong></li>
+            <li><span>*</span> Nevermind - Nirvana <strong>0</strong></li>
+        </ul>
+    </div>
+
+    <div class="border-bottom mt-5"></div>
+
+    <div style="padding-bottom: 50px;">
+        <div class="compra-header-titulo mt-5 d-flex align-items-center">
+            <i class="bi bi-bag fs-3 ms-2"></i>
+            <h2 class="text-start ms-2 mt-1">Histórico de Compras</h2>
+        </div>
+
+        <div class="card-historico border border-3 d-flex mt-5">
+            <h3 class="text-light d-flex cliente-tag bg-maria">Maria ° 16/04/2026</h3>
+            <div class="d-flex justify-content-between align-items-center mt-4 px-3">
+                <h2 class="mb-0 text-white">Weedkiller - Ashnikko</h2>
+                <i class="bi bi-cart-fill fs-3 text-white"> R$ 270</i>
+            </div>
+        </div>
+
+        <div class="card-historico border border-3 d-flex mt-5">
+            <h3 class="text-light d-flex cliente-tag bg-gabriel">Gabriel ° 01/02/2026</h3>
+            <div class="d-flex justify-content-between align-items-center mt-4 px-3">
+                <div class="d-flex flex-column">
+                    <h2 class="mb-0 text-white">Autodomínio - Pumapjl</h2>
+                    <h2 class="text-white">Oproprio - Yago Oproprio</h2>
+                </div>
+                <i class="bi bi-cart-fill fs-3" style="color: #cf72408a;"> R$ 550</i>
+            </div>
+        </div>
+
+        <div class="card-historico border border-3 mt-5">
+            <h3 class="text-light d-flex cliente-tag bg-maria">Alice ° 29/01/2026</h3>
+            <div class="d-flex justify-content-between align-items-center mt-4 px-3">
+                <h2 class="mb-0 text-white">Jar of Flies - Alice in Chains</h2>
+                <i class="bi bi-cart-fill fs-3 text-white"> R$ 290</i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -126,7 +126,7 @@ i:hover {
 }
 
 .arm-vinyl {
-    width: 63rem;
+    width: 73rem;
 }
 
 /* Hero - textos */
@@ -499,6 +499,11 @@ i:hover {
     margin-left: 6px;
 }
 
+.disco-2 {
+    width: 22rem;
+    margin-left: -6rem;
+}
+
 /* Contato */
 
 .contact {
@@ -714,6 +719,7 @@ textarea {
     color: #8B0000;
 }
 
+/* Modal */
 
 .album-modal{
     width:100vw;
@@ -827,4 +833,224 @@ textarea {
     font-family:'Mango';
     font-weight:700;
     padding-right:1rem;
+}
+
+/* Dashboard (parte da Isa) */
+
+.body-admin {
+    background-color: rgba(61, 11, 13, 1);
+    color: white;
+}
+
+.div-painel {
+    background-color: rgba(150, 97, 12, 1); /* O fundo agora fica na div inteira */
+    padding: 10px 40px; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remova o background do h2 para não conflitar */
+.div-painel h2 {
+    background-color: transparent; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do Botão de Sair */
+.btn-sair {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-sair:hover {
+    background-color: white;
+    color: rgba(150, 97, 12, 1);
+}
+
+.img-disco-topo {
+    width: 400px; 
+    margin-left: -80px; 
+    margin-top: -30px;
+}
+
+/* --- SEÇÃO ADICIONAR --- */
+.adiciona-container {
+    width: 1150px; 
+    height: 100px; 
+    margin-top: 40px; 
+    border-radius: 20px;
+}
+
+.adiciona h1 {
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.input-group-custom {
+    width: 450px; 
+    margin-left: 170px;
+}
+
+.input-group-right {
+    width: 450px; 
+    margin-left: 300px;
+}
+
+.btn-cadastrar-disco {
+    width: 500px; 
+    height: 50px; 
+    background-color: rgba(150, 97, 12, 0.9); 
+    border-radius: 5px; 
+    margin-left: 500px;
+    border: 1px solid white;
+}
+
+/* --- TÍTULO DO ESTOQUE (NOVO) --- */
+.estoque-titulo-container {
+    background-color: rgba(159, 78, 35, 1);
+    width: 1300px;
+    height: 70px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+
+.estoque-titulo-texto {
+    color: rgba(251, 223, 162, 1);
+    text-align: center;
+    padding-top: 8px;
+}
+
+/* --- ESTILO DAS LISTAS (ESTOQUE) --- */
+.estoque-container {
+    background-color: rgb(255, 224, 156); 
+    width: 1300px; 
+    margin-left: 100px; 
+    border-radius: 5px; 
+    color: rgba(159, 78, 35, 1);
+}
+
+.btn-lista {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 224, 156);
+    color: rgba(159, 78, 35, 1);
+    border: none;
+    border-bottom: 3px solid rgba(159, 78, 35, 1);
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.lista-discos {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lista-discos li {
+    background-color: rgba(156, 135, 89, 0.72);
+    color: white;
+    height: 50px;
+    border-bottom: 1px solid rgba(159, 78, 35, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 20px;
+}
+
+.lista-discos li span { width: 30px; }
+.lista-discos li strong { font-weight: normal; font-size: 24px; }
+
+/* --- HISTÓRICO DE COMPRAS --- */
+.compra-header-titulo {
+    background-color: rgba(150, 97, 12, 1);
+    width: 1300px;
+    height: 60px; 
+    margin-left: 100px; 
+    border-radius: 5px; 
+    color: rgb(255, 224, 156);
+}
+
+.card-historico {
+    width: 1300px;
+    margin-left: 100px; 
+    height: 150px;
+    background-color: rgba(61, 11, 13, 1); 
+    flex-direction: column;
+}
+
+.cliente-tag {
+    width: 100%; 
+    height: 40px; 
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Cores específicas dos cabeçalhos das compras */
+.bg-maria { background-color: rgba(251, 223, 162, 0.54); }
+.bg-gabriel { background-color: #9f4e238a; }
+
+
+/* --- AJUSTES PARA CELULARES (Media Query) --- */
+@media (max-width: 768px) {
+    /* Ajusta o topo e imagem */
+    .img-disco-topo {
+        width: 150px;
+        margin-left: 0;
+        margin-top: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Remove as larguras fixas de 1150px/1300px e margens de 100px */
+    .adiciona-container, 
+    .estoque-titulo-container, 
+    .estoque-container, 
+    .compra-header-titulo, 
+    .card-historico {
+        width: 95% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: auto; /* Permite que o conteúdo cresça verticalmente */
+    }
+
+    /* Ajusta os grupos de input para ficarem um embaixo do outro */
+    .input-group-custom, 
+    .input-group-right {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Ajusta o botão de cadastrar */
+    .btn-cadastrar-disco {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+    }
+
+    /* Ajusta o formulário para não quebrar o layout */
+    .card-body .d-flex {
+        flex-direction: column !important;
+    }
+
+    /* Ajuste de fontes para não estourarem no mobile */
+    .btn-lista {
+        font-size: 20px;
+    }
+    
+    .lista-discos li {
+        font-size: 16px;
+    }
 }
